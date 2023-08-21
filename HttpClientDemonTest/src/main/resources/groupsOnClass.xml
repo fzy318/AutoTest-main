@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<suite name="groupsOnClass">
+    <test name="runAll">
+        <classes>
+            <class name="com.course.httpclient.code.groups.GroupsClass1" />
+            <class name="com.course.httpclient.code.groups.GroupsClass2" />
+            <class name="com.course.httpclient.code.groups.GroupsClass3" />
+        </classes>
+    </test>
+    <test name="onlyRun">
+        <groups>
+            <run>
+                <include name="stu"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.course.httpclient.code.groups.GroupsClass1" />
+            <class name="com.course.httpclient.code.groups.GroupsClass2" />
+            <class name="com.course.httpclient.code.groups.GroupsClass3" />
+        </classes>
+    </test>
+
+</suite>

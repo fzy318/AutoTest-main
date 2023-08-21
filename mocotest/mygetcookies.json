@@ -1,0 +1,15 @@
+[
+  {
+    "description": "这是一个获取cookies的请求",
+    "request": {
+      "uri": "/test/getCookies",
+      "method": "get"
+    },
+    "response": {
+      "cookies": {
+        "login": "true"
+      },
+      "text": "这是获取cookies信息的返回"
+    }
+  }
+]

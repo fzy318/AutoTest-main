@@ -1,0 +1,32 @@
+
+moco框架
+    命令：java -jar ./moco-runner-0.11.1-standalone.jar http -p 9900 -c mygetcookies.json
+TestNG组测试
+ 1，方法级别分组的测试，关于在方法上分组的标签注解
+ 2，类级别分组的测试，把整个类文件进行分组测试
+    注：把@Test标签添加在类上，就是类测试,@Test(groups = "stu")对类进行分组
+ 3，关于组测试，如何在类上运行
+    在resources文件下，创建xml文件，例如：groupsOnClass.xml
+    文件内容如下：
+    <suite name="groupsOnClass">
+        <test name="runAll">
+            <classes>
+                <class name="com.course.httpclient.code.groups.GroupsClass1" />
+                <class name="com.course.httpclient.code.groups.GroupsClass2" />
+                <class name="com.course.httpclient.code.groups.GroupsClass3" />
+            </classes>
+        </test>
+        <test name="onlyRun">
+            <groups>
+                <run>
+                    <include name="stu"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="com.course.httpclient.code.groups.GroupsClass1" />
+                <class name="com.course.httpclient.code.groups.GroupsClass2" />
+                <class name="com.course.httpclient.code.groups.GroupsClass3" />
+            </classes>
+        </test>
+
+    </suite>
